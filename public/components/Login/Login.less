@@ -1,0 +1,106 @@
+@import '~config';
+
+.login {
+  background-image: linear-gradient(to bottom, #ffffff, #ebf7ff);
+  min-height: 100vh;
+  padding: 20px 15px 22px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 9.5px 0 13px;
+    &-logo {
+      width: 153px;
+      height: 58px;
+    }
+  }
+  &__socials {
+    margin-top: 39px;
+    &-item {
+      margin-top: 35px;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+  &__delimiter {
+    position: relative;
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+    &-text {
+      font-size: 15px;
+      color: #12202b;
+      opacity: 0.6;
+    }
+    &:before, &:after {
+      content: '';
+      width: ~"calc(50% - (45px / 2))";
+      height: 1px;
+      background: #dddddd;
+      position: absolute;
+      top: 10px;
+    }
+    &:before {
+      left: 0;
+    }
+    &:after {
+      right: 0;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 0 20px;
+    &-field {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 16px;
+      &-label {
+        font-size: 21px;
+        font-weight: @fontWeightBold;
+        color: #12202b;
+        margin-bottom: 5px;
+      }
+      &-input {
+        font-size: 18px;
+        border: solid 1px #dddddd;
+        border-radius: @borderRadius;
+        padding: 12px;
+        transition: 0.3s;
+        &_active, &:focus, &:hover {
+         border: solid 1px #377fea;
+        }
+      }
+    }
+    &-button {
+      width: 244px;
+    }
+    &-utility {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 20px;
+      &-link {
+        text-decoration: none;
+        font-size: 18px;
+        color: #377fea;
+      }
+    }
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: solid 1px #dddddd;
+    padding-top: 30px;
+    &-button {
+      width: 124px;
+    }
+  }
+}
