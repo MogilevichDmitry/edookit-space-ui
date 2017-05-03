@@ -4,7 +4,7 @@
   padding: 15px 40px 40px;
   &__title {
     margin: 30px 0 57px;
-    font-size: 30px;
+    font-size: 1.875em;
     color: #12202b;
     text-align: center;
   }
@@ -12,7 +12,7 @@
     display: flex;
     flex-direction: column;
     margin-top: 40px;
-    padding-bottom: 36px;
+    padding-bottom: 40px;
     border-bottom: solid 1px #dddddd;
     &:first-child {
       margin-top: 0;
@@ -21,27 +21,27 @@
       border-bottom: 0;
     }
     &-title {
-      font-size: 30px;
+      font-size: 1.875em;
       font-weight: @fontWeightBold;
       color: #12202b;
     }
     &-description {
-      font-size: 18px;
+      font-size: 1.125em;
       opacity: 0.6;
       color: #12202b;
     }
     &-items {
       display: flex;
-      flex-direction: row;
+      flex-wrap: wrap;
     }
   }
   &__item {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 25px 0 0 25px;
-    &:first-child {
-      margin-left: 0;
+    margin: 25px 25px 0 0;
+    &:last-child {
+      margin-right: 0;
     }
     &-main {
       display: flex;
@@ -101,15 +101,73 @@
       }
     }
     &-title {
-      font-size: 24px;
+      font-size: 1.500em;
       font-weight: @fontWeightBold;
       color: #377fea;
     }
     &-description {
       width: 242px;
-      font-size: 15px;
+      font-size: 0.938em;
       opacity: 0.6;
       color: #12202b;
+    }
+  }
+}
+
+
+@media (max-width: 960px) {
+  .apps {
+    &__item {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .apps {
+    padding: 21px 15px 25px;
+    &__title {
+      display: none;
+    }
+    &__compilation {
+      margin-top: 30px;
+      padding-bottom: 50px;
+      &:first-child {
+        margin-top: 30px;
+      }
+      &-title {
+        text-align: center;
+      }
+      &-description {
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .apps {
+    &__item {
+      &-picture {
+        width: 70px;
+        height: 70px;
+        .icon {
+          width: 30px;
+          height: 32px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .apps {
+    font-size: 0.9em;
+    &__item {
+      &-description {
+        width: 200px;
+      }
     }
   }
 }
