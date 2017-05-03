@@ -1,6 +1,7 @@
 import React from 'react';
 import Checkbox from '../checkbox/checkbox.jsx';
 import Button from '../button/button.jsx';
+import ButtonShowPassword from '../button-show-password/button-show-password.jsx';
 
 const LoginForm = () => (
   <form className="login__form">
@@ -25,6 +26,7 @@ const LoginForm = () => (
         id="login-input-password"
         placeholder="Type your password"
       />
+      <ButtonShowPassword className="login__form-field-show-password" />
     </div>
     <div className="login__form-utility">
       <Checkbox className="login__form-utility-checkbox" label="Remember me"/>
