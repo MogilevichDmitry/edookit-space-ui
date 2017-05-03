@@ -2,14 +2,16 @@ import React from 'react';
 import AppsItem from './Apps__item.jsx';
 import PropTypes from 'prop-types';
 
-const AppsCompilationItems = () => (
+const AppsCompilationItems = ({data}) => (
   <div className="apps__compilation">
-    <h2 className="apps__compilation-title">Your Active Apps</h2>
+    <h2 className="apps__compilation-title">{data.title}</h2>
     <div className="apps__compilation-description">
-      From this section you can go to applications you are already using.
+      {data.description}
     </div>
     <div className="apps__compilation-items">
-      <AppsItem />
+      {data.items.map((item) => (
+        <AppsItem key={item.id} data={item} />
+      ))}
     </div>
   </div>
 )

@@ -3,12 +3,23 @@
 .apps {
   padding: 15px 40px 40px;
   &__title {
-    margin-top: 30px;
+    margin: 30px 0 57px;
     font-size: 30px;
     color: #12202b;
     text-align: center;
   }
   &__compilation {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    padding-bottom: 36px;
+    border-bottom: solid 1px #dddddd;
+    &:first-child {
+      margin-top: 0;
+    }
+    &:last-child {
+      border-bottom: 0;
+    }
     &-title {
       font-size: 30px;
       font-weight: @fontWeightBold;
@@ -19,12 +30,75 @@
       opacity: 0.6;
       color: #12202b;
     }
+    &-items {
+      display: flex;
+      flex-direction: row;
+    }
   }
   &__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 25px 0 0 25px;
+    &:first-child {
+      margin-left: 0;
+    }
+    &-main {
+      display: flex;
+      flex-direction: column;
+      margin-left: 15px;
+    }
     &-picture {
+      display: flex;
       width: 100px;
-      heigth: 100px;
+      height: 100px;
       border-radius: 50%;
+      justify-content: center;
+      align-items: center;
+      &_chat {
+        background-color: #6573ff;
+        .icon {
+          width: 40px;
+          height: 37px;
+        }
+      }
+      &_share {
+        background-color: #00c5de;
+        .icon {
+          width: 40px;
+          height: 37px;
+        }
+      }
+      &_schools {
+        background-color: #ffc64d;
+        .icon {
+          width: 40px;
+          height: 34px;
+        }
+      }
+      &_webbuilder {
+        background-color: #ff8797;
+        .icon {
+          width: 39px;
+          height: 40px;
+        }
+      }
+      &_edookit {
+        background-color: #fff;
+        border: solid 2px #377fea;
+        .icon {
+          width: 38px;
+          height: 40px;
+        }
+      }
+      &_skolaris {
+        background-color: #fff;
+        border: solid 2px #377fea;
+        .icon {
+          width: 50px;
+          height: 50px;
+        }
+      }
     }
     &-title {
       font-size: 24px;
@@ -32,6 +106,7 @@
       color: #377fea;
     }
     &-description {
+      width: 242px;
       font-size: 15px;
       opacity: 0.6;
       color: #12202b;

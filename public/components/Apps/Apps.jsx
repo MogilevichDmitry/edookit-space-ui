@@ -4,12 +4,17 @@ import AppsCompilationItems from './Apps__compilation-items.jsx';
 import './Apps.less';
 
 import user from '../../data/user.data.js';
+import data from '../../data/apps.data.js';
 
 const Apps = () => (
   <div className="apps">
     <Header user={user} />
     <h1 className="apps__title">{`Hi ${user.name}, welcome back to your space.`}</h1>
-    <AppsCompilationItems />
+    <div className="apps__compilations-wrapper">
+      {data.map((item) => (
+        <AppsCompilationItems key={item.id} data={item} />
+      ))}
+    </div>
   </div>
 )
 
