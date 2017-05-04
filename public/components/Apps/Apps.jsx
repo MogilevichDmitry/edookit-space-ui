@@ -8,7 +8,7 @@ import data from '../../data/apps.data.js';
 
 const Apps = () => (
   <div className="apps">
-    <Header user={user} />
+    <Header alert={2} user={user} />
     <h1 className="apps__title">{`Hi ${user.name}, welcome back to your space.`}</h1>
     <div className="apps__compilations-wrapper">
       {data.map((item) => (
