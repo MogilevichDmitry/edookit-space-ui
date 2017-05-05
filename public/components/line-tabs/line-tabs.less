@@ -1,0 +1,42 @@
+.line-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 60px;
+  &:after {
+    position: absolute;
+    content: "";
+    top: 16px;
+    right: 45px;
+    width: 350px;
+    height: 3px;
+    background-color: #ddd;
+    z-index: 1;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 100px;
+    &:last-child {
+      margin-right: 0;
+      margin-left: 25px;
+    }
+    &-circle {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      background-color: #dddddd;
+      border: solid 5px #ebf7ff;
+      margin-bottom: 2px;
+      z-index: 2;
+    }
+    &-title {
+      font-size: 1.125em;
+      font-weight: bold;
+      color: #12202b;
+      opacity: 0.3;
+    }
+  }
+}
