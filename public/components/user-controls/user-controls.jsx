@@ -5,10 +5,10 @@ import Notifications from '../notifications/notifications.jsx';
 import ButtonUserMenu from '../button-user-menu/button-user-menu.jsx';
 import './user-controls.less';
 
-const UserControls = ({alert, user}) => (
+const UserControls = ({alerts, user}) => (
   <div className="user-controls">
     <ButtonAppMenu className="user-controls__button-menu" />
-    <Notifications alert={alert} />
+    <Notifications className="user-controls__notifications" alerts={alerts} />
     <div className="user-controls__username">
       {`${user.name} ${user.family}`}
     </div>
@@ -17,7 +17,7 @@ const UserControls = ({alert, user}) => (
 )
 
 UserControls.propTypes = {
-  alert: PropTypes.number,
+  alerts: PropTypes.number,
   user: PropTypes.object
 }
 

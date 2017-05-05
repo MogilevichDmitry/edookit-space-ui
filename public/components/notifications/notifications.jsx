@@ -6,18 +6,15 @@ import ButtonNotification from '../button-notification/button-notification.jsx';
 
 import './notifications.less';
 
-const Notifications = ({alert}) => (
-  <div className="notifications">
-    <ButtonNotification className="notifications__btn"/>
-    {alert ?
-      <AlertCount className="notifications__alert" count={alert}/>
-      : null
-    }
+const Notifications = ({className, alerts}) => (
+  <div className={classnames('notifications', className)}>
+    <ButtonNotification className="notifications__button"/>
+    {alerts && <AlertCount className="notifications__alert" count={alerts}/>}
   </div>
 )
 
 Notifications.propTypes = {
-  alert: PropTypes.number
+  alerts: PropTypes.number
 }
 
 export default Notifications;

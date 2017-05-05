@@ -9,14 +9,14 @@ import './social-button.less';
 const FACEBOOK = 'FACEBOOK';
 const GOOGLE = 'GOOGLE';
 
-const SocialButton = ({className, modifier}) => {
+const SocialButton = ({className, modifier, text}) => {
   const socialNetwork = modifier;
 
   return (
     <button className={`social-button social-button_${socialNetwork} ${className}`}>
       {renderIcon(socialNetwork)}
       <span className="social-button__title">
-        {`Log in with ${socialNetwork}`}
+        {text}
       </span>
     </button>
   );
@@ -43,7 +43,6 @@ const renderIcon = (socialNetwork) => {
 }
 
 SocialButton.propTypes = {
-  modifier: PropTypes.string,
   modifier: PropTypes.string
 };
 

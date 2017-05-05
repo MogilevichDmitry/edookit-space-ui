@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Icon from '../icon/icon.jsx';
 import IconChat from '!raw-loader!../../resources/icons/icon-chat.svg';
 import IconShare from '!raw-loader!../../resources/icons/icon-share.svg';
@@ -12,6 +13,7 @@ const SHARE = 'SHARE';
 const SCHOOLS = 'SCHOOLS';
 const WEBBUILDER = 'WEBBUILDER';
 const SKOLARIS = 'SKOLARIS';
+const EDOOKIT = 'EDOOKIT';
 
 const AppsItem = ({data}) => (
   <div className="apps__item">
@@ -46,10 +48,21 @@ const renderIcon = (modifier) => {
     case SKOLARIS:
       return <Icon svg={IconSkolaris}/>;
       break;
+    case EDOOKIT:
+      return <Icon svg={IconEdookit}/>;
+      break;
     default:
       return <Icon svg={IconEdookit}/>;
       break;
   }
+}
+
+AppsItem.propTypes = {
+  data: PropTypes.shape({
+    modifier: PropTypes.string,
+    title: PropTypes.string,
+    description: PropTypes.string
+  })
 }
 
 export default AppsItem;

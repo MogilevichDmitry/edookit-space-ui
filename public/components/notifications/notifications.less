@@ -1,26 +1,17 @@
 .notifications {
-  &__btn{
+  position: relative;
+  &__button {
     display: flex;
     align-items: center;
     position: relative;
-    margin-right: 28px;
   }
   &__alert {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: absolute;
-    content: "";
-    top: 20px;
-    right: 205px;
+    top: -3px;
+    right: -2px;
     width: 14px;
     height: 14px;
     font-size: 10px;
     color: white;
-  }
-}
-@media (max-width: 768px) {
-  .notifications {
-    display: none;
   }
 }

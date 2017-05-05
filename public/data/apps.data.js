@@ -18,7 +18,6 @@ export default [
       }
     ]
   },
-
   {
     id: '2',
     title: 'Free Apps',
@@ -32,7 +31,6 @@ export default [
       }
     ]
   },
-
   {
     id: '3',
     title: 'Premium Apps',

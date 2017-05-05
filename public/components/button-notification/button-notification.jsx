@@ -6,7 +6,7 @@ import IconNotification from '!raw-loader!../../resources/icons/icon-notificatio
 import './button-notification.less';
 
 const ButtonNotification = ({className}) => (
-  <button className={classnames('btn-notification', className)}>
+  <button className={classnames('button-notification', className)}>
     <Icon svg={IconNotification} />
   </button>
 );

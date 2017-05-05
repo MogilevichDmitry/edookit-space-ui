@@ -6,7 +6,7 @@ import IconShowPassword from '!raw-loader!../../resources/icons/icon-show-passwo
 import './button-show-password.less';
 
 const ButtonShowPassword = ({className}) => (
-  <button className={classnames('btn-show-password', className)}>
+  <button className={classnames('button-show-password', className)}>
     <Icon svg={IconShowPassword} />
   </button>
 );

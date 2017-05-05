@@ -11,8 +11,16 @@ export default class Login extends React.Component {
       <div className="login">
         <LoginHeader />
         <div className="login__socials">
-          <SocialButton className="login__socials-item" modifier="Facebook" />
-          <SocialButton className="login__socials-item" modifier="Google" />
+          <SocialButton
+            className="login__socials-item"
+            modifier="facebook"
+            text="Log in with Facebook"
+          />
+          <SocialButton
+            className="login__socials-item"
+            modifier="google"
+            text="Log in with Google"
+          />
         </div>
         <div className="login__delimiter">
           <span className="login__delimiter-text">or</span>

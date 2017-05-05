@@ -4,15 +4,15 @@ import SearchInput from '../search-input/search-input.jsx';
 import UserControls from '../user-controls/user-controls.jsx';
 import './header.less';
 
-const Header = ({alert, user}) => (
+const Header = ({alerts, user}) => (
   <div className="header">
     <SearchInput className="header__search" placeholder="Search Edookit Space..."/>
-    <UserControls alert={alert} user={user}/>
+    <UserControls alerts={alerts} user={user}/>
   </div>
 )
 
 Header.propTypes = {
-  alert: PropTypes.number,
+  alerts: PropTypes.number,
   user: PropTypes.object
 }
 
