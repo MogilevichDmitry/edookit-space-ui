@@ -6,17 +6,7 @@ import SignupSchool from './Signup__school.jsx';
 import LineTabs from '../line-tabs/line-tabs.jsx';
 import './Signup.less';
 
-const tabsItems = [
-  {
-    title: 'Basic Info'
-  },
-  {
-    title: 'Password'
-  },
-  {
-    title: 'School'
-  }
-]
+const tabsItems = ['Basic Info', 'Password', 'School'];
 
 class Signup extends React.Component {
   constructor() {

@@ -19,7 +19,7 @@ const LineTabs = ({items, handler, activeIndex}) => (
           onClick={() => handler(index)}
         >
           <span className="line-tabs__item-circle"></span>
-          <span className="line-tabs__item-title">{item.title}</span>
+          <span className="line-tabs__item-title">{item}</span>
         </div>
       );
     })}
@@ -27,10 +27,7 @@ const LineTabs = ({items, handler, activeIndex}) => (
 );
 
 LineTabs.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.shape({
-    title: PropTypes.string,
-    modifier: PropTypes.string
-  })),
+  item: PropTypes.string,
   handler: PropTypes.func,
   activeIndex: PropTypes.number
 }
