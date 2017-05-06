@@ -1,27 +1,31 @@
+@import '~config';
+
 .line-tabs {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
   height: 60px;
-  &:after {
-    position: absolute;
-    content: '';
-    top: 16px;
-    right: 45px;
-    width: 350px;
-    height: 3px;
-    background-color: #ddd;
-    z-index: 1;
-  }
   &__item {
     display: flex;
     align-items: center;
     flex-direction: column;
+    position: relative;
     margin-right: 100px;
+    &:after {
+      position: absolute;
+      content: '';
+      top: 15px;
+      left: 63px;
+      width: 146px;
+      height: 3px;
+      background-color: #ddd;
+    }
     &:last-child {
       margin-right: 0;
-      margin-left: 25px;
+      margin-left: 14px;
+    }
+    &:last-child:after {
+      content: none;
     }
     &-circle {
       width: 30px;
@@ -29,13 +33,25 @@
       border-radius: 50%;
       background-color: #dddddd;
       margin-bottom: 2px;
-      z-index: 2;
     }
     &-title {
       font-size: 1.125em;
-      font-weight: bold;
+      font-weight: @fontWeightBold;
       color: #12202b;
       opacity: 0.3;
+    }
+    &_active > .line-tabs__item {
+      &-circle {
+        background-color: #377fea;
+      }
+      &-title {
+        opacity: 1;
+      }
+    }
+    &_completed > .line-tabs__item {
+      &-circle {
+        background-color: #8bbf84;
+      }
     }
   }
 }

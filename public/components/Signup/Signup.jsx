@@ -1,6 +1,8 @@
 import React from 'react';
 import SingupHeader from './Signup__header.jsx';
-import SignupItem from './Signup__item.jsx';
+import SignupBasicInfo from './Signup__basic-info.jsx';
+import SignupPassword from './Signup__password.jsx';
+import SignupSchool from './Signup__school.jsx';
 import LineTabs from '../line-tabs/line-tabs.jsx';
 import './Signup.less';
 
@@ -23,7 +25,7 @@ class Signup extends React.Component {
     super();
 
     this.state = {
-      activeIndex: 2
+      activeIndex: 0
     }
   }
 
@@ -32,9 +34,9 @@ class Signup extends React.Component {
     return (
       <div className="signup">
         <SingupHeader />
-        {activeIndex === 0 && <div>basic</div>}
-        {activeIndex === 1 && <div>password</div>}
-        {activeIndex === 2 && <div>school</div>}
+        {activeIndex === 0 && <SignupBasicInfo />}
+        {activeIndex === 1 && <SignupPassword />}
+        {activeIndex === 2 && <SignupSchool />}
         <LineTabs items={tabsItems} className="signup__item-line-tabs" />
       </div>
     );
