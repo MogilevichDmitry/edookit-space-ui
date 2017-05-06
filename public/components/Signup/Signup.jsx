@@ -8,12 +8,10 @@ import './Signup.less';
 
 const tabsItems = [
   {
-    title: 'Basic Info',
-    modifier: 'completed'
+    title: 'Basic Info'
   },
   {
-    title: 'Password',
-    modifier: 'active'
+    title: 'Password'
   },
   {
     title: 'School'
@@ -27,20 +25,36 @@ class Signup extends React.Component {
     this.state = {
       activeIndex: 0
     }
+
+    this.handleTab = this.handleTab.bind(this);
+  }
+
+  handleTab(index) {
+    this.setState({activeIndex: index});
   }
 
   render() {
     const { activeIndex } = this.state;
+
     return (
       <div className="signup">
         <SingupHeader />
-        {activeIndex === 0 && <SignupBasicInfo />}
-        {activeIndex === 1 && <SignupPassword />}
-        {activeIndex === 2 && <SignupSchool />}
-        <LineTabs items={tabsItems} className="signup__item-line-tabs" />
+        <div className="signup__item">
+          {activeIndex === 0 && <SignupBasicInfo />}
+          {activeIndex === 1 && <SignupPassword />}
+          {activeIndex === 2 && <SignupSchool />}
+        </div>
+        <LineTabs
+          items={tabsItems}
+          handler={this.handleTab}
+          className="signup__item-line-tabs"
+          activeIndex={activeIndex}
+        />
       </div>
     );
   }
 }
+
+
 
 export default Signup;

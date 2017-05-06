@@ -1,8 +1,8 @@
 import React from 'react';
 
 const SignupSchool = () => (
-  <div className="signup__form">
-    <div className="school"></div>
+  <div className="signup__school">
+    SCHOOL
   </div>
 );
 

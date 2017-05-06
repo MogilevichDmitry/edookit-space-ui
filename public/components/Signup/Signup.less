@@ -29,56 +29,37 @@
       font-size: 1.313em;
     }
   }
-  &__form {
+  &__item {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin: 25px 0 15px;
-    .basic-info {
-      width: 825px;
-      height: 443px;
-      background-color: #fff;
-      border-radius: @borderRadius;
-      border: solid 1px #dddddd;
-      padding: 20px 29px 24px;
-      &__icon {
-        display: flex;
-        justify-content: center;
-        .icon {
-          width: 100px;
-          height: 91px;
-        }
-      }
-      &__main {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 15px;
-        height: 285px;
-      }
-      &__registration {
-        width: 412px;
-        padding: 7px 29px 0 0;
-      }
-      &__signup {
-        width: 410px;
-        padding: 9px 32px 119px 60px;
-        border-left: solid 1px #dddddd;
+    background-color: #fff;
+    border: solid 1px #dddddd;
+    border-radius: @borderRadius;
+    &-picture {
+      display: flex;
+      justify-content: center;
+      .icon {
+        width: 100px;
+        height: 91px;
       }
     }
-    .password {
-      width: 414px;
-      height: 443px;
-      background-color: #fff;
-      border-radius: @borderRadius;
-      border: solid 1px #dddddd;
+  }
+  &__basic {
+    padding: 20px 29px 24px;
+    &-main {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
     }
-    .school {
-      width: 414px;
-      height: 443px;
-      background-color: #fff;
-      border-radius: @borderRadius;
-      border: solid 1px #dddddd;
+    &-registration {
+      padding: 7px 29px 0 0;
+    }
+    &-socials {
+      padding: 9px 32px 119px 60px;
+      border-left: solid 1px #dddddd;
     }
   }
 }

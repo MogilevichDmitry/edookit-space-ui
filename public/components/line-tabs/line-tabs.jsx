@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import './line-tabs.less';
 
-const LineTabs = ({items}) => (
+const LineTabs = ({items, handler, activeIndex}) => (
   <div className="line-tabs">
     {items.map((item, index) => {
-      const isActive = item.modifier === 'active';
-      const isCompleted = item.modifier === 'completed';
+      const isActive = activeIndex === index;
+      const isCompleted = activeIndex > index;
 
       return (
         <div className={classnames({
@@ -16,6 +16,7 @@ const LineTabs = ({items}) => (
             'line-tabs__item_completed': isCompleted
           })}
           key={index}
+          onClick={() => handler(index)}
         >
           <span className="line-tabs__item-circle"></span>
           <span className="line-tabs__item-title">{item.title}</span>
@@ -29,7 +30,9 @@ LineTabs.propTypes = {
   items: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string,
     modifier: PropTypes.string
-  }))
+  })),
+  handler: PropTypes.func,
+  activeIndex: PropTypes.number
 }
 
 export default LineTabs;
