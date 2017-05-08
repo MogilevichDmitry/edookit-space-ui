@@ -54,12 +54,124 @@
       justify-content: space-between;
       margin-top: 15px;
     }
-    &-registration {
-      padding: 7px 29px 0 0;
+    &-form {
+      width: 356px;
+      &-description {
+        margin-top: 5px;
+        font-size: 0.813em;
+        color: #12202b;
+        opacity: 0.6;
+        text-align: left;
+        font-weight: @fontWeightBold;
+      }
+      .icon:first-child {
+        width: 19px;
+        height: 14px;
+      }
+      .icon:last-child {
+        width: 16px;
+        height: 20px;
+      }
+      .input-field {
+        margin-top: 20px;
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+      &-button {
+        margin: 39px 37px 16px 30px;
+        width: 289px;
+        font-size: 1.313em;
+      }
     }
     &-socials {
-      padding: 9px 32px 119px 60px;
-      border-left: solid 1px #dddddd;
+      position: relative;
+      padding: 9px 32px 0 90px;
+      &-title {
+        display: flex;
+        justify-content: center;
+        font-size: 1.125em;
+        font-weight: @fontWeightBold;
+        color: #12202b;
+      }
+      &-item {
+        margin-top: 20px;
+        width: 289px;
+      }
+      &:before {
+        position: absolute;
+        content: "";
+        top: 1px;
+        left: 27px;
+        width: 1px;
+        height: 285px;
+        background-color: #ddd;
+      }
+    }
+  }
+  &__password {
+    padding: 38px 29px 40px;
+    .signup__item-picture {
+      .icon {
+        width: 117px;
+        height: 111px;
+      }
+    }
+    .input-field__label {
+      font-size: 1.125em;
+      margin-bottom: 10px;
+    }
+    &-form {
+      width: 356px;
+      margin-top: 39px;
+      &-title {
+        position: relative;
+        margin: 10px 0 0 21px;
+        font-size: 0.813em;
+        color: #12202b;
+        opacity: 0.6;
+        &:before {
+          position: absolute;
+          content: "";
+          width: 10px;
+          height: 10px;
+          left: -21px;
+          top: 2px;
+          border-radius: 50%;
+          background-color: #717980;
+        }
+      }
+      &-button {
+        margin: 36px 33px 0 34px;
+        width: 289px;
+        font-size: 1.313em;
+      }
+    }
+  }
+  &__school {
+    padding: 20px 23px 40px 35px;
+    .signup__item-picture {
+      .icon {
+        width: 100px;
+        height: 85px;
+      }
+    }
+    &-title {
+      text-align: center;
+      margin: 14px 0 1px;
+      font-size: 1.125em;
+    }
+    .input-field__label {
+      font-size: 1.125em;
+      margin-top: 20px;
+    }
+    &-form {
+      width: 356px;
+      &-button {
+        margin: 23px 39px 0 28px;
+        width: 289px;
+        font-size: 1.313em;
+      }
     }
   }
 }
