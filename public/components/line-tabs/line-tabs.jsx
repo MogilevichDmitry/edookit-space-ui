@@ -23,7 +23,7 @@ const LineTabs = ({items, handler, activeIndex}) => {
            key={index}
            onClick={() => handler(index)}
          >
-           <div className="line-tabs__item">
+           <div className="line-tabs__label">
              <span className="line-tabs__item-circle"></span>
              <span className="line-tabs__item-title">{item}</span>
            </div>

@@ -177,4 +177,24 @@
       }
     }
   }
+  &_withStart {
+    .signup {
+      &__header {
+        display: none;
+      }
+      &__start-header {
+        display: block;
+      }
+    }
+    .line-tabs {
+      order: -1;
+    }
+  }
+  &:not(.signup_withStart) {
+    .line-tabs {
+      .line-tabs__item:first-child {
+        display: none;
+      }
+    }
+  }
 }
