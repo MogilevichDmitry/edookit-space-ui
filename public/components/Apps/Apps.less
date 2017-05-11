@@ -2,34 +2,41 @@
 
 .apps {
   padding: 15px 40px 40px;
+
   &__title {
     margin: 30px 0 57px;
     font-size: 1.875em;
     color: #12202b;
     text-align: center;
   }
+
   &__compilation {
     display: flex;
     flex-direction: column;
     margin-top: 40px;
     padding-bottom: 40px;
     border-bottom: solid 1px #dddddd;
+
     &:first-child {
       margin-top: 0;
     }
+
     &:last-child {
       border-bottom: 0;
     }
+
     &-title {
       font-size: 1.875em;
       font-weight: @fontWeightBold;
       color: #12202b;
     }
+
     &-description {
       font-size: 1.125em;
       opacity: 0.6;
       color: #12202b;
     }
+
     &-items {
       display: flex;
       flex-wrap: wrap;
@@ -39,14 +46,17 @@
     display: flex;
     align-items: center;
     margin: 25px 25px 0 0;
+
     &:last-child {
       margin-right: 0;
     }
+
     &-main {
       display: flex;
       flex-direction: column;
       margin-left: 15px;
     }
+
     &-picture {
       display: flex;
       width: 100px;
@@ -54,6 +64,7 @@
       border-radius: 50%;
       justify-content: center;
       align-items: center;
+
       &_chat {
         background-color: #6573ff;
         .icon {
@@ -61,6 +72,7 @@
           height: 37px;
         }
       }
+
       &_share {
         background-color: #00c5de;
         .icon {
@@ -68,6 +80,7 @@
           height: 37px;
         }
       }
+
       &_schools {
         background-color: #ffc64d;
         .icon {
@@ -75,6 +88,7 @@
           height: 34px;
         }
       }
+
       &_webbuilder {
         background-color: #ff8797;
         .icon {
@@ -82,6 +96,7 @@
           height: 40px;
         }
       }
+
       &_edookit {
         background-color: #fff;
         border: solid 2px #377fea;
@@ -90,6 +105,7 @@
           height: 40px;
         }
       }
+
       &_skolaris {
         background-color: #fff;
         border: solid 2px #377fea;
@@ -99,11 +115,13 @@
         }
       }
     }
+
     &-title {
       font-size: 1.500em;
       font-weight: @fontWeightBold;
       color: #377fea;
     }
+
     &-description {
       width: 242px;
       font-size: 0.938em;
@@ -126,18 +144,23 @@
 @media (max-width: 768px) {
   .apps {
     padding: 21px 15px 25px;
+
     &__title {
       display: none;
     }
+
     &__compilation {
       margin-top: 30px;
       padding-bottom: 50px;
+
       &:first-child {
         margin-top: 30px;
       }
+
       &-title {
         text-align: center;
       }
+      
       &-description {
         text-align: center;
       }

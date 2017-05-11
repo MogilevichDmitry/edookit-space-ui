@@ -5,33 +5,38 @@
   flex-direction: column;
   justify-content: center;
   width: 100%;
+
   &__label {
     font-size: 1.313em;
     font-weight: @fontWeightBold;
     color: #12202b;
     margin-bottom: 5px;
   }
+
   &__input-wrapper {
     display: flex;
     align-items: center;
     position: relative;
     width: 100%;
   }
+
   &__input {
     font-size: 1.125em;
     border: solid 1px #dddddd;
     border-radius: @borderRadius;
-    padding: 12px;
+    padding: 11px 0 11px 18px;;
     transition: 0.3s;
     width: 100%;
     &_active, &:focus, &:hover {
      border: solid 1px #377fea;
     }
   }
+
   &__icon {
     position: absolute;
     right: 15px;
   }
+
   &__button {
     position: absolute;
     right: 15px;
