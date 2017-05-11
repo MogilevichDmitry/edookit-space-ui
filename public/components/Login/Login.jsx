@@ -3,6 +3,7 @@ import LoginHeader from './Login__header.jsx';
 import LoginForm from './Login__form.jsx';
 import LoginFooter from './Login__footer.jsx';
 import SocialButton from '../social-button/social-button.jsx';
+import Divider from '../divider/divider.jsx';
 
 import './Login.less';
 
@@ -23,9 +24,7 @@ export default class Login extends React.Component {
             text="Log in with Google"
           />
         </div>
-        <div className="login__delimiter">
-          <span className="login__delimiter-text">or</span>
-        </div>
+        <Divider className="login__divider">or</Divider>
         <LoginForm />
         <LoginFooter />
       </div>

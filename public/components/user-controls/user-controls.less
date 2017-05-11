@@ -1,31 +1,39 @@
 .user-controls {
   display: flex;
   align-items: center;
+
   &__button-menu {
     margin-right: 17px;
   }
+
   &__username {
     font-size: 1.125em;
     color: #377fea;
   }
+
   &__button-user-menu {
     display: none;
   }
+
   &__notifications {
     margin-right: 28px;
   }
 }
+
 @media (max-width: 768px) {
   .user-controls {
     &__button-user-menu {
       display: block;
     }
+
     &__button-menu {
       display: none;
     }
+
     &__username {
       display: none;
     }
+    
     &__notifications {
       display: none;
     }

@@ -7,10 +7,12 @@
   user-select: none;
   &__input {
     margin-right: 10px;
+
     &:not(:checked), &:checked {
       position: absolute;
       left: -9999px;
     }
+
     &:not(:checked) + label, &:checked + label {
       position: relative;
       padding-left: 1.95em;
@@ -19,6 +21,7 @@
       display: flex;
       align-items: center;
     }
+
     &:not(:checked) + label:before,
     &:checked + label:before {
       content: '';
@@ -31,6 +34,7 @@
       background: white;
       border-radius: @borderRadius;
     }
+
     &:not(:checked) + label:after,
     &:checked + label:after {
       content: '✔';
@@ -41,14 +45,17 @@
       color: #377fea;
       transition: 0.3s;
     }
+
     &:not(:checked) + label:after {
       opacity: 0;
       transform: scale(0);
     }
+
     &:checked + label:after {
       opacity: 1;
       transform: scale(1);
     }
+    
     &:checked + label:before,
     &:checked:focus + label:before {
       border: 1px solid #377fea;

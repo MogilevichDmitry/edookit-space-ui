@@ -6,6 +6,7 @@ import IconMail from '!raw-loader!../../resources/icons/icon-mail.svg';
 import IconFullName from '!raw-loader!../../resources/icons/icon-full-name.svg';
 import Button from '../button/button.jsx';
 import SocialButton from '../social-button/social-button.jsx';
+import Divider from '../divider/divider.jsx';
 
 const SignupBasicInfo = () => (
   <div className="signup__basic">
@@ -43,6 +44,7 @@ const SignupBasicInfo = () => (
           modifier="google"
           text="Google"
         />
+        <Divider className="signup__basic-divider">or</Divider>
       </div>
     </div>
   </div>
