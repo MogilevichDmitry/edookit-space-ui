@@ -11,14 +11,32 @@
     align-items: center;
     width: 100%;
     padding: 0 9.5px 0 13px;
+
     &-logo {
-      width: 153px;
-      height: 58px;
+      width: 170px;
+      height: 29px;
+    }
+  }
+
+  &__main-form {
+    display: flex;
+    flex-direction: column;
+    &-logo {
+      display: none;
+      justify-content: center;
+      align-items: center;
+      width: 170px;
+      height: 29px;
     }
   }
 
   &__socials {
-    margin-top: 39px;
+    margin: 39px auto;
+
+    .social-button {
+      width: 289px;
+    }
+
     &-item {
       margin-top: 35px;
       &:first-child {
@@ -38,7 +56,17 @@
     padding: 30px 0 20px;
 
     &-field {
-      margin-bottom: 16px;
+      &-mail {
+        margin-bottom: 16px;
+        .icon {
+          display: none;
+          width: 25px;
+          height: 14px;
+        }
+      }
+      &-password {
+        margin-bottom: 16px;
+      }
     }
 
     &-button {
@@ -67,6 +95,116 @@
     padding-top: 30px;
     &-button {
       width: 124px;
+    }
+  }
+}
+
+@media (min-width: 425px) {
+  .login {
+    padding: 20px 25px 22px;
+  }
+}
+
+@media (min-width: 550px) {
+  .login {
+    padding: 20px 40px 22px;
+  }
+}
+
+@media (min-width: 768px) {
+  .login {
+    &__form {
+      width:  550px;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (min-width: 960px) {
+  .login {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('./assets/login-bg.svg');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 0 0;
+
+    &__header {
+      &-logo {
+        display: none;
+      }
+
+      &-menu {
+        display: none;
+      }
+    }
+
+    &__main-form {
+      align-items: center;
+      flex-direction: column-reverse;
+      width: 450px;
+      padding: 25px 47px 0px;
+      background-color: #fff;
+      border: solid 1px #dddddd;
+      border-radius: @borderRadius;
+      &-logo {
+        display: flex;
+      }
+    }
+
+    &__socials {
+      margin-top: 19px;
+
+      .social-button {
+        height: 47px;
+      }
+      &-item {
+        margin-top: 15px;
+      }
+    }
+
+    &__divider {
+      margin: 0 5px;
+    }
+
+    &__form {
+      width: 356px;
+      padding: 20px 0;
+
+      &-field {
+        &-mail {
+          margin-bottom: 15px;
+          .icon {
+            display: block;
+          }
+        }
+
+        &-password {
+          margin-bottom: 20px;
+        }
+      }
+
+      &-utility {
+        margin-bottom: 25px;
+        &-link {
+          text-decoration: underline;
+        }
+      }
+
+      &-button {
+        width: 289px;
+        font-size: 1.313em
+      }
+    }
+
+    &__footer {
+      border-top: 0;
+      padding-top: 25px;
+      &-button {
+        margin-left: 30px;
+      }
     }
   }
 }

@@ -1,11 +1,11 @@
 import React from 'react';
-import LogoSpace from '../logo-space/logo-space.jsx';
+import LogoSchoolspot from '../logo-schoolspot/logo-schoolspot.jsx';
 import ButtonUserMenu from '../button-user-menu/button-user-menu.jsx';
 
 const LoginHeader = () => (
   <div className="login__header">
-    <LogoSpace className="login__header-logo" />
-    <ButtonUserMenu />
+    <LogoSchoolspot className="login__header-logo" />
+    <ButtonUserMenu className="login__header-menu" />
   </div>
 );
 
