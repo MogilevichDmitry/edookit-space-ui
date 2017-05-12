@@ -55,11 +55,35 @@
       opacity: 1;
       transform: scale(1);
     }
-    
+
     &:checked + label:before,
     &:checked:focus + label:before {
       border: 1px solid #377fea;
     }
 
+  }
+}
+
+@media (min-width: 960px) {
+  .checkbox {
+    height: 22px;
+    &__input {
+
+      &:not(:checked) + label, &:checked + label {
+        padding-left: 30px;
+      }
+
+      &:not(:checked) + label:before,
+      &:checked + label:before {
+        width: 20px;
+        height: 20px;
+      }
+
+      &:not(:checked) + label:after,
+      &:checked + label:after {
+        top: 0px;
+        left: 4px;
+      }
+    }
   }
 }
