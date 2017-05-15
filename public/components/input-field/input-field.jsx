@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
+import Selector from '../selector/selector.jsx';
 import Button from '../button/button.jsx';
 import Icon from '../icon/icon.jsx';
 
 import './input-field.less';
 
-const InputField = ({className, label, icon, button, type, placeholder}) => (
+const InputField = ({className, isSelector, selectorList, label, icon, button, type, placeholder}) => (
   <div className={classnames('input-field', className)}>
     {label &&
       <label
@@ -17,12 +18,15 @@ const InputField = ({className, label, icon, button, type, placeholder}) => (
       </label>
     }
     <div className="input-field__input-wrapper">
-      <input
-        className="input-field__input"
-        id={`input-${label}`}
-        type={type}
-        placeholder={placeholder}
-      />
+      {isSelector ?
+        <Selector title={placeholder} width="100%" options={selectorList} />:
+        <input
+          className="input-field__input"
+          id={`input-${label}`}
+          type={type}
+          placeholder={placeholder}
+        />
+      }
       {icon && <Icon className="input-field__icon" svg={icon} />}
       {button && <div className="input-field__button">{button}</div>}
     </div>

@@ -1,0 +1,84 @@
+.selector {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  font-size: 18px;
+  z-index: 20;
+
+  &__toggler {
+    display: inline-block;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 12px 40px 12px 20px;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    background: white;
+    color: #12202b;
+    opacity: 0.6;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      right: 12px;
+      top: ~"calc(50% - 8.5px)";
+      width: 17px;
+      height: 17px;
+      background: url('../../resources/icons/icon-arrow.svg') no-repeat 0 0;
+      background-size: cover;
+      transition: .2s;
+    }
+
+    &_active {
+      &:after {
+        transform: rotate(180deg);
+      }
+    }
+
+    &_withPlaceholder {
+      color: #12202b;
+      opacity: 0.6;
+    }
+  }
+
+  &__list {
+    display: none;
+    background: white;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    margin-top: 5px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px 0px rgba(0,0,0,0.15);
+
+    &_open {
+      display: block;
+    }
+  }
+
+  &__item {
+    display: inline-block;
+    padding: 9px 40px 9px 9px;
+    cursor: pointer;
+    border-bottom: 1px solid white;
+    transition: .2s;
+    white-space: nowrap;
+    min-width: 100%;
+    color: #12202b;
+    opacity: 0.6;
+
+    &:hover {
+      background: white;
+    }
+    
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  &_active {
+    z-index: 99;
+  }
+
+}
